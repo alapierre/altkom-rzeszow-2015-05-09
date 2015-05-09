@@ -29,6 +29,8 @@ public class MatrixTest {
         
         assert matrix.var[1][1] == 12 ;
         
+        
+        
     }
     
     @Test

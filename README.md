@@ -1,0 +1,1 @@
+Szkolenie JPR Rzeszów 2015-05-09 - 2015-05-16

@@ -13,6 +13,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.io.UnsupportedEncodingException;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -26,13 +27,13 @@ public class WordCounter {
         
         Map<String, Integer> wordsMap = new TreeMap<>();
         
-        try (BufferedReader reader = openFileForRead(inputFile)) {
+        try (BufferedReader reader = openFileForRead(inputFile, "UTF-8")) {
             String line;
         
             while((line = reader.readLine()) != null) {
                 System.out.println(line);
                 
-                String[] words = line.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
+                String[] words = line.replaceAll("[^a-zA-Z0-9 ]", "").toLowerCase().split("\\s+");
                 
                 for(String word : words) {
                     addWord(wordsMap, word);
@@ -53,11 +54,11 @@ public class WordCounter {
         }
     }
     
-    private BufferedReader openFileForRead(File file) {
+    private BufferedReader openFileForRead(File file, String encoding) throws UnsupportedEncodingException {
         
         try {
             BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(new FileInputStream(file)));
+                    new InputStreamReader(new FileInputStream(file), encoding));
             
             return reader;
         } catch (FileNotFoundException ex) {

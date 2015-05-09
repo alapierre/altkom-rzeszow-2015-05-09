@@ -9,29 +9,36 @@ package pl.altkom.jpr;
  *
  * @author Administrator
  */
-public class ArrayList {
+public class ArrayList<T> {
     
     protected Object[] var;
     private int currentElement;
 
+    public ArrayList(int size) {
+        var = new Object[size];
+    }
+    
     public ArrayList() {
         var = new Object[10];
     }
     
-    public void add(Object value) {
+    public void add(T value) {
         
         if(var.length == currentElement) {
-            Object[] tmp = new Object[var.length + 10];
-            System.arraycopy(var, 0, tmp, 0, var.length);
-            var = tmp;
+            extendArray(10);
         }
         
         var[currentElement++] = value;
-        
+    }
+
+    private void extendArray(int sizeDelta) {
+        Object[] tmp = new Object[var.length + sizeDelta];
+        System.arraycopy(var, 0, tmp, 0, var.length);
+        var = tmp;
     }
     
-    public Object get(int index) {
-        return var[index];
+    public T get(int index) {
+        return (T)var[index];
     }
     
 }

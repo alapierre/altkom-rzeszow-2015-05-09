@@ -47,4 +47,15 @@ public class ArrayListTest {
         assert (Integer)list.get(0) == 12;
                 
     }
+    
+    @Test
+    public void testBadElement() {
+        
+        ArrayList<Integer> l = new ArrayList();
+        //l.add("ala ma kota");
+        l.add(12);
+        //l.add(12.02);
+        
+        int i =  l.get(1);
+    }
 }

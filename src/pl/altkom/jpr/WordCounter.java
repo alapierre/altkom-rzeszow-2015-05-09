@@ -33,7 +33,7 @@ public class WordCounter {
             while((line = reader.readLine()) != null) {
                 System.out.println(line);
                 
-                String[] words = line.replaceAll("[^a-zA-Z0-9 ]", "").toLowerCase().split("\\s+");
+                String[] words = line.trim().replaceAll("[^a-zA-Z0-9 ]", "").toLowerCase().split("\\s+");
                 
                 for(String word : words) {
                     addWord(wordsMap, word);
@@ -46,11 +46,13 @@ public class WordCounter {
     }
 
     private void addWord(Map<String, Integer> result, String word) {
-        if(result.containsKey(word)) {
-            Integer wordCount = result.get(word);
-            result.put(word, ++wordCount);
-        } else {
-            result.put(word, 1);
+        if(!word.isEmpty()) {
+            if(result.containsKey(word)) {
+                Integer wordCount = result.get(word);
+                result.put(word, ++wordCount);
+            } else {
+                result.put(word, 1);
+            }
         }
     }
     

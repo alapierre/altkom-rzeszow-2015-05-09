@@ -20,39 +20,30 @@ package pl.altkom.jpr.bookstore;
  * @author Waldemar Dacko <dackow@gmail.com>
  */
 public class Payment {
-    private long id;
-    private STATUS status; 
-    private TYPE type;
+
+    private PaymentStatus status;
+    private PaymentType type;
     private Price price;
 
-    public Payment(long _id, STATUS _status, TYPE _type, Price _price) {
-        this.id = _id;
+    public Payment(PaymentStatus _status, PaymentType _type, Price _price) {
         this.status = _status;
         this.type = _type;
         this.price = _price;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long _id) {
-        this.id = _id;
-    }
-
-    public STATUS getStatus() {
+    public PaymentStatus getStatus() {
         return status;
     }
 
-    public void setStatus(STATUS _status) {
+    public void setStatus(PaymentStatus _status) {
         this.status = _status;
     }
 
-    public TYPE getType() {
+    public PaymentType getType() {
         return type;
     }
 
-    public void setType(TYPE _type) {
+    public void setType(PaymentType _type) {
         this.type = _type;
     }
 
@@ -63,17 +54,5 @@ public class Payment {
     public void setPrice(Price _price) {
         this.price = _price;
     }
-    
-    enum STATUS {
-        NEW, CONFIRMED, REJECTED
-    }
-    
-    enum TYPE {
-        CASH, CARD, PAYPAL
-    }
+
 }
-
-
-
-
-

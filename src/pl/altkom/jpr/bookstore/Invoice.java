@@ -20,5 +20,13 @@ package pl.altkom.jpr.bookstore;
  * @author Szczepan <szczeixs@gmail.com>
  */
 public class Invoice {
+    String buyer;
+    String seller;
+    int invoiceID;
+    double tax;
+    String paymentMethonName;
+    String delivieryMethodName;
+    String invoiceDate;
+    
     
 }

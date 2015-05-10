@@ -15,6 +15,8 @@
  */
 package pl.altkom.jpr.bookstore;
 
+import java.util.Date;
+
 /**
  *
  * @author krakiewicz.pl <arek@krakiewicz.pl>
@@ -22,12 +24,21 @@ package pl.altkom.jpr.bookstore;
 public class Order {
     
     private int id;
-    private int customerId;
-    private String createDate;
-    private String lastModificationDate;
-    private int paymentId;
-    private int shippingId;
+    private Customer customer;
+    private Payment payment;
+    private int shipping;    
+    private Date createDate;
+    private Date lastModificationDate;
 
+    public Order(int id, Customer customer, Payment payment, int shipping, Date createDate, Date lastModificationDate) {
+        this.id = id;
+        this.customer = customer;
+        this.payment = payment;
+        this.shipping = shipping;
+        this.createDate = createDate;
+        this.lastModificationDate = lastModificationDate;
+    }
+    
     public int getId() {
         return id;
     }
@@ -36,44 +47,44 @@ public class Order {
         this.id = id;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
-    public String getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(String createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
-    public String getLastModificationDate() {
+    public Date getLastModificationDate() {
         return lastModificationDate;
     }
 
-    public void setLastModificationDate(String lastModificationDate) {
+    public void setLastModificationDate(Date lastModificationDate) {
         this.lastModificationDate = lastModificationDate;
     }
 
-    public int getPaymentId() {
-        return paymentId;
+    public Payment getPayment() {
+        return payment;
     }
 
-    public void setPaymentId(int paymentId) {
-        this.paymentId = paymentId;
+    public void setPayment(Payment payment) {
+        this.payment = payment;
     }
 
-    public int getShippingId() {
-        return shippingId;
+    public int getShipping() {
+        return shipping;
     }
 
-    public void setShippingId(int shippingId) {
-        this.shippingId = shippingId;
+    public void setShipping(int shipping) {
+        this.shipping = shipping;
     }
     
     

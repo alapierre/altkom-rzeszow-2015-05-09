@@ -22,10 +22,9 @@ package pl.altkom.jpr.bookstore;
 public class OrderItem {
     
     private int orderItemId;
-    private int orderId;    
-    private int bookId;   
-    private double bookPrice;
-    private double bookQuantity;
+    private Order order;    
+    private Book book;
+    private int bookQuantity;
 
     public int getOrderItemId() {
         return orderItemId;
@@ -35,35 +34,27 @@ public class OrderItem {
         this.orderItemId = orderItemId;
     }
 
-    public int getOrderId() {
-        return orderId;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
-    public int getBookId() {
-        return bookId;
+    public Book getBook() {
+        return book;
     }
 
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
-    public double getBookPrice() {
-        return bookPrice;
-    }
-
-    public void setBookPrice(double bookPrice) {
-        this.bookPrice = bookPrice;
-    }
-
-    public double getBookQuantity() {
+    public int getBookQuantity() {
         return bookQuantity;
     }
 
-    public void setBookQuantity(double bookQuantity) {
+    public void setBookQuantity(int bookQuantity) {
         this.bookQuantity = bookQuantity;
     }
     

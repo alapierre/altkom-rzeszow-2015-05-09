@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Administrator.
+ * Copyright 2015 Piotr Basiak.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,17 +17,24 @@ package pl.altkom.jpr.bookstore;
 
 /**
  *
- * @author Administrator
+ * @author Piotr Basiak
  */
-public class Book {
+public class Category {
     
     private int id;
-    private String title;
-    private String author;
+    private String name;
     private String description;
-    private String isbn;
-    private int quantity;
 
+    public Category() {
+        
+    }
+    
+    public Category(int id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
+    
     public int getId() {
         return id;
     }
@@ -36,12 +43,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String name) {
-        this.title = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -51,23 +58,5 @@ public class Book {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-    
-    
     
 }

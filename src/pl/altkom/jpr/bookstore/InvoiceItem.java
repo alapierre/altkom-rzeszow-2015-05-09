@@ -20,8 +20,64 @@ package pl.altkom.jpr.bookstore;
  * @author Szczepan <szczeixs@gmail.com>
  */
 public class InvoiceItem {
-    String itemName;
-    String itemISBN;
-    double itemPrice;
-    int itemAmount;
+    private String itemName;
+    private String itemISBN;
+    private double itemPrice;
+    private int itemAmount;
+
+    /**
+     * @return the itemName
+     */
+    public String getItemName() {
+        return itemName;
+    }
+
+    /**
+     * @param itemName the itemName to set
+     */
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    /**
+     * @return the itemISBN
+     */
+    public String getItemISBN() {
+        return itemISBN;
+    }
+
+    /**
+     * @param itemISBN the itemISBN to set
+     */
+    public void setItemISBN(String itemISBN) {
+        this.itemISBN = itemISBN;
+    }
+
+    /**
+     * @return the itemPrice
+     */
+    public double getItemPrice() {
+        return itemPrice;
+    }
+
+    /**
+     * @param itemPrice the itemPrice to set
+     */
+    public void setItemPrice(double itemPrice) {
+        this.itemPrice = itemPrice;
+    }
+
+    /**
+     * @return the itemAmount
+     */
+    public int getItemAmount() {
+        return itemAmount;
+    }
+
+    /**
+     * @param itemAmount the itemAmount to set
+     */
+    public void setItemAmount(int itemAmount) {
+        this.itemAmount = itemAmount;
+    }
 }

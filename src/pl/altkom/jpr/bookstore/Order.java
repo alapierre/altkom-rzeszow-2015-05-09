@@ -21,13 +21,12 @@ package pl.altkom.jpr.bookstore;
  */
 public class Order {
     
-    public int id;
-    public int customerId;
-    public int bookId;
-    public String createDate;
-    public String lastModificationDate;
-    public int paymentId;
-    public int shippingId;
+    private int id;
+    private int customerId;
+    private String createDate;
+    private String lastModificationDate;
+    private int paymentId;
+    private int shippingId;
 
     public int getId() {
         return id;
@@ -43,14 +42,6 @@ public class Order {
 
     public void setCustomerId(int customerId) {
         this.customerId = customerId;
-    }
-
-    public int getBookId() {
-        return bookId;
-    }
-
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
     }
 
     public String getCreateDate() {

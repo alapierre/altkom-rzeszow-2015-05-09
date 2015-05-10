@@ -15,21 +15,24 @@
  */
 package pl.altkom.jpr;
 
-import org.joda.time.LocalDate;
-
 /**
  *
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
-public class JodaTimeEx {
+public class ThreadEx extends Thread {
+
+    @Override
+    public void run() {
+        System.out.println("thread");
+    }
+    
+    
     
     public static void main(String[] args) {
-        
-        LocalDate date = LocalDate.now();
-        
-        System.out.println(date);
-        
-        
+    
+        ThreadEx th = new ThreadEx();
+        th.start();
+        System.out.println("!!!!!!");
         
     }
     

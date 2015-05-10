@@ -15,21 +15,37 @@
  */
 package pl.altkom.jpr;
 
-import org.joda.time.LocalDate;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  *
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
-public class JodaTimeEx {
+public class TimerEx {
     
     public static void main(String[] args) {
         
-        LocalDate date = LocalDate.now();
+        Timer timer = new Timer();
         
-        System.out.println(date);
+        timer.schedule(new TimerTask() {
+
+            @Override
+            public void run() {
+                System.out.println("go!");
+            }
+        }, 2000, 2000);
         
+        timer.schedule(new MyTimerTask(), 2000, 2000);
         
+    }
+ 
+    static class MyTimerTask extends TimerTask {
+
+        @Override
+        public void run() {
+            System.out.println("go!");
+        }
         
     }
     

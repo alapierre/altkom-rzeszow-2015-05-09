@@ -15,22 +15,14 @@
  */
 package pl.altkom.jpr;
 
-import org.joda.time.LocalDate;
-
 /**
  *
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
-public class JodaTimeEx {
+public class Storage {
     
-    public static void main(String[] args) {
-        
-        LocalDate date = LocalDate.now();
-        
-        System.out.println(date);
-        
-        
-        
-    }
+    private int licznik;
+    
+    
     
 }

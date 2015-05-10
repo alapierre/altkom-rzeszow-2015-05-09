@@ -15,21 +15,23 @@
  */
 package pl.altkom.jpr;
 
-import org.joda.time.LocalDate;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  *
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
-public class JodaTimeEx {
+public class i18nEx {
     
     public static void main(String[] args) {
         
-        LocalDate date = LocalDate.now();
+        ResourceBundle bundle = 
+                ResourceBundle.getBundle("labels", Locale.FRANCE);
         
-        System.out.println(date);
+        String str = bundle.getString("hello");
         
-        
+        System.out.println(str);
         
     }
     

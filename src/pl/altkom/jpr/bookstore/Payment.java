@@ -24,9 +24,9 @@ public class Payment {
     private PaymentType type;
     private Price price;
 
-    public Payment(PaymentType _type, Price _price) {
-        this.type = _type;
-        this.price = _price;
+    public Payment(PaymentType type, Price price) {
+        this.type = type;
+        this.price = price;
     }
 
     public PaymentStatus getStatus() {

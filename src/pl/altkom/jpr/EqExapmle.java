@@ -20,15 +20,15 @@ package pl.altkom.jpr;
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
 public class EqExapmle {
-    
+
     public static void main(String[] args) {
-        
+
         Person p1 = new Person("Jan", "Kowalski");
         Person p2 = new Person("Jan", "Kowalski");
-        
+
         System.out.println(p1.equals(p2));
         System.out.println(p1 == p2);
-        
+
     }
-    
+
 }

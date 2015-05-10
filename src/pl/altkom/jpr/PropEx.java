@@ -14,22 +14,20 @@ import java.util.Properties;
  * @author Administrator
  */
 public class PropEx {
-    
+
     public static void main(String[] args) throws IOException {
         Properties p = System.getProperties();
-        
-        for(Object key : p.keySet()) {
-            
-            System.out.println(key +  " -> " + p.get(key));
-            
+
+        for (Object key : p.keySet()) {
+
+            System.out.println(key + " -> " + p.get(key));
+
         }
-        
+
         File f = File.createTempFile("mojplik", ".txt");
         f.deleteOnExit();
         System.out.println(f);
-        
-        
-        
+
     }
-    
+
 }

@@ -23,28 +23,28 @@ import java.util.List;
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
 public class SortExample {
-    
+
     public static void main(String[] args) {
-        
+
         List<Person> list = new java.util.ArrayList<>();
-        
+
         list.add(new Person("Jan", "Kowalski"));
         list.add(new Person("Piotr", "Nowak"));
         list.add(new Person("Adam", "Zieliński"));
         list.add(new Person("Krzysztof", "Adamski"));
-        
+
         Collections.sort(list);
-        
-        for(Person person : list) {
+
+        for (Person person : list) {
             System.out.println(person);
         }
-        
+
         Collections.sort(list, new PersonComparator());
-        
-        for(Person person : list) {
+
+        for (Person person : list) {
             System.out.println(person);
         }
-        
+
     }
-    
+
 }

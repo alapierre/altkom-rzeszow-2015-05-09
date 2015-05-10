@@ -20,6 +20,7 @@ package pl.altkom.jpr.bookstore;
  * @author Administrator
  */
 public class Stock {
+
     private String BookName;
     private int Count;
     private int Order;

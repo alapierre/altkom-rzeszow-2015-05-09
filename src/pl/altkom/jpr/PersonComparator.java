@@ -21,11 +21,11 @@ import java.util.Comparator;
  *
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
-public class PersonComparator implements Comparator<Person>{
+public class PersonComparator implements Comparator<Person> {
 
     @Override
     public int compare(Person p1, Person p2) {
         return p1.getName().compareTo(p2.getName());
     }
-    
+
 }

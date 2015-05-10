@@ -20,6 +20,7 @@ package pl.altkom.jpr.bookstore;
  * @author k.potera<your.name at your.org>
  */
 public class Cart {
+
     public String bookList;
-    
+
 }

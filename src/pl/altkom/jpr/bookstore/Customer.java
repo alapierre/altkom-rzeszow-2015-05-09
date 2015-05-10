@@ -20,10 +20,10 @@ package pl.altkom.jpr.bookstore;
  * @author k.potera<your.name at your.org>
  */
 public class Customer {
-     public String name;
-     public String lastName;
-     public String email;
-     public int phoneNumber;
-   
-    
+
+    public String name;
+    public String lastName;
+    public String email;
+    public int phoneNumber;
+
 }

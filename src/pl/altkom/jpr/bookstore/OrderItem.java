@@ -20,10 +20,10 @@ package pl.altkom.jpr.bookstore;
  * @author krakiewicz.pl <arek@krakiewicz.pl>
  */
 public class OrderItem {
-    
+
     private int orderItemId;
-    private int orderId;    
-    private int bookId;   
+    private int orderId;
+    private int bookId;
     private double bookPrice;
     private double bookQuantity;
 
@@ -66,6 +66,5 @@ public class OrderItem {
     public void setBookQuantity(double bookQuantity) {
         this.bookQuantity = bookQuantity;
     }
-    
-    
+
 }

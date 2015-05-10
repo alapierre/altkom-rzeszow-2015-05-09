@@ -20,7 +20,7 @@ package pl.altkom.jpr.bookstore;
  * @author krakiewicz.pl <arek@krakiewicz.pl>
  */
 public class Order {
-    
+
     private int id;
     private int customerId;
     private String createDate;
@@ -75,7 +75,5 @@ public class Order {
     public void setShippingId(int shippingId) {
         this.shippingId = shippingId;
     }
-    
-    
-    
+
 }

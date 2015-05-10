@@ -20,9 +20,10 @@ package pl.altkom.jpr.bookstore;
  * @author Administrator
  */
 public class User {
+
     private String Name;
     private String SeconName;
     private boolean Present;
     private int OrderToDoOnDay;
-    
+
 }

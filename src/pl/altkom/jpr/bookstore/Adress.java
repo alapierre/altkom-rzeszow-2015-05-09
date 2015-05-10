@@ -81,7 +81,7 @@ public class Adress {
     private String city;
     private String kod;
     private String country;
-    private String fon;
+    private String phone;
     
     public Adress(){
         

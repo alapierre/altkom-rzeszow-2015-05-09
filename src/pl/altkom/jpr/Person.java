@@ -15,11 +15,14 @@
  */
 package pl.altkom.jpr;
 
+import java.io.Serializable;
+import java.util.Objects;
+
 /**
  *
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
-public class Person implements Comparable<Person> {
+public class Person implements Comparable<Person>, Serializable {
 
     private String name;
     private String lastName;
@@ -32,6 +35,9 @@ public class Person implements Comparable<Person> {
         this.lastName = lastName;
     }
     
+    /*
+    działanie compareTo powinno być spójne z działąniem equails()
+    */
     @Override
     public int compareTo(Person o) {
         return lastName.compareTo(o.lastName);
@@ -57,5 +63,33 @@ public class Person implements Comparable<Person> {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + Objects.hashCode(this.name);
+        hash = 29 * hash + Objects.hashCode(this.lastName);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Person other = (Person) obj;
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (!Objects.equals(this.lastName, other.lastName)) {
+            return false;
+        }
+        return true;
+    }
+ 
+    
     
 }

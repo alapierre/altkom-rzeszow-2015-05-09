@@ -20,6 +20,7 @@ package pl.altkom.jpr.bookstore;
  * @author Szczepan <szczeixs@gmail.com>
  */
 public class InvoiceItem {
+
     private String itemName;
     private String itemISBN;
     private double itemPrice;

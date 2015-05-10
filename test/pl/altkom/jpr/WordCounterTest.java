@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
  * @author Administrator
  */
 public class WordCounterTest {
-    
+
     public WordCounterTest() {
     }
 
@@ -24,15 +24,15 @@ public class WordCounterTest {
      */
     @Test
     public void testCountWordsInFile() throws Exception {
-    
+
         WordCounter wc = new WordCounter();
-        
+
         Map<String, Integer> res = wc.countWordsInFile(new File("alamakota.txt"));
-        
-        for(Map.Entry<String, Integer> entry : res.entrySet()) {
+
+        for (Map.Entry<String, Integer> entry : res.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
-        
+
     }
-    
+
 }

@@ -15,18 +15,21 @@
  */
 package pl.altkom.jpr.bookstore;
 
+import java.util.Date;
+
 /**
  *
  * @author Szczepan <szczeixs@gmail.com>
  */
 public class Invoice {
+
     private String buyer;
     private String seller;
     private int invoiceID;
     private double tax;
     private String paymentMethonName;
     private String delivieryMethodName;
-    private String invoiceDate;
+    private Date invoiceDate;
 
     /**
      * @return the buyer
@@ -112,19 +115,11 @@ public class Invoice {
         this.delivieryMethodName = delivieryMethodName;
     }
 
-    /**
-     * @return the invoiceDate
-     */
-    public String getInvoiceDate() {
+    public Date getInvoiceDate() {
         return invoiceDate;
     }
 
-    /**
-     * @param invoiceDate the invoiceDate to set
-     */
-    public void setInvoiceDate(String invoiceDate) {
+    public void setInvoiceDate(Date invoiceDate) {
         this.invoiceDate = invoiceDate;
     }
-    
-    
 }

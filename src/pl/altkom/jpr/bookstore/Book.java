@@ -20,7 +20,7 @@ package pl.altkom.jpr.bookstore;
  * @author Administrator
  */
 public class Book {
-    
+
     private int id;
     private String title;
     private String author;
@@ -76,7 +76,5 @@ public class Book {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-    
-    
-    
+
 }

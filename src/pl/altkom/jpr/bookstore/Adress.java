@@ -21,24 +21,6 @@ package pl.altkom.jpr.bookstore;
  */
 public class Adress {
 
-    private String street;
-    private String streetNumber;        
-    private String city;
-    private String zipCode;
-    private String country;
-    private String phoneNumber;
-    
-    public Adress(String street, String city, String kod, String country, String fon){
-        this.street = street;
-        this.city = city;
-        this.zipCode = kod;
-        this.country = country;
-        this.phoneNumber = fon;
-    }
-
-    public Adress() {
-    }
-
     public String getStreet() {
         return street;
     }
@@ -48,11 +30,11 @@ public class Adress {
     }
 
     public String getNr() {
-        return streetNumber;
+        return nr;
     }
 
     public void setNr(String nr) {
-        this.streetNumber = nr;
+        this.nr = nr;
     }
 
     public String getCity() {
@@ -64,11 +46,11 @@ public class Adress {
     }
 
     public String getKod() {
-        return zipCode;
+        return kod;
     }
 
     public void setKod(String kod) {
-        this.zipCode = kod;
+        this.kod = kod;
     }
 
     public String getCountry() {
@@ -80,14 +62,29 @@ public class Adress {
     }
 
     public String getFon() {
-        return phoneNumber;
+        return fon;
     }
 
     public void setFon(String fon) {
-        this.phoneNumber = fon;
+        this.fon = fon;
     }
-    
-    
-    
-    
+
+    public Adress(String street, String city, String kod, String country, String fon) {
+        this.street = street;
+        this.city = city;
+        this.kod = kod;
+        this.country = country;
+        this.fon = fon;
+    }
+    private String street;
+    private String nr;
+    private String city;
+    private String kod;
+    private String country;
+    private String fon;
+
+    public Adress() {
+
+    }
+
 }

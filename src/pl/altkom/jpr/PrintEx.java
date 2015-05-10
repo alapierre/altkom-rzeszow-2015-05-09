@@ -20,13 +20,13 @@ package pl.altkom.jpr;
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
 public class PrintEx {
-    
+
     public static void main(String[] args) {
-        
+
         System.out.printf("Ala ma %f lat a ja mam %f lat.\n", 1000000.3333333, 20.6666666);
-        
+
         String str = String.format("Ala ma %f lat a ja mam %f lat.\n", 1000000.3333333, 20.6666666);
-        
+
     }
-    
+
 }

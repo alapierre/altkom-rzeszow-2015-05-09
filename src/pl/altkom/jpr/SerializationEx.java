@@ -24,18 +24,18 @@ import java.io.ObjectOutputStream;
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
 public class SerializationEx {
-    
+
     public static void main(String[] args) throws IOException {
-        
+
         Person person = new Person("Jan", "Kowalski");
-        
+
         ObjectOutputStream oos = new ObjectOutputStream(
-                    new FileOutputStream("time.ser"));
-     
+                new FileOutputStream("time.ser"));
+
         oos.writeObject(person);
-        
+
         oos.close();
-        
+
     }
-    
+
 }

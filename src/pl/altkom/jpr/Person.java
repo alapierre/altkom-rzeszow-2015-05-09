@@ -34,10 +34,10 @@ public class Person implements Comparable<Person>, Serializable {
         this.name = name;
         this.lastName = lastName;
     }
-    
+
     /*
-    działanie compareTo powinno być spójne z działąniem equails()
-    */
+     działanie compareTo powinno być spójne z działąniem equails()
+     */
     @Override
     public int compareTo(Person o) {
         return lastName.compareTo(o.lastName);
@@ -89,7 +89,5 @@ public class Person implements Comparable<Person>, Serializable {
         }
         return true;
     }
- 
-    
-    
+
 }

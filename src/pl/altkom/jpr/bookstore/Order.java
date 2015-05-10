@@ -22,7 +22,7 @@ import java.util.Date;
  * @author krakiewicz.pl <arek@krakiewicz.pl>
  */
 public class Order {
-    
+
     private int id;
     private Customer customer;
     private Payment payment;
@@ -86,7 +86,5 @@ public class Order {
     public void setShipping(int shipping) {
         this.shipping = shipping;
     }
-    
-    
-    
+
 }

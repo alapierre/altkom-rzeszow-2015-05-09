@@ -14,9 +14,9 @@ public class Child extends Parent {
     public Child() {
         super();
     }
-    
+
     public static void main(String[] args) {
         Child c = new Child();
     }
-    
+
 }

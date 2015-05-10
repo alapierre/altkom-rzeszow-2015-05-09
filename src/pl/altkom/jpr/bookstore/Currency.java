@@ -19,30 +19,6 @@ package pl.altkom.jpr.bookstore;
  *
  * @author Waldemar Dacko <dackow@gmail.com>
  */
-public class Price {
-    private double value;
-    private Currency currency;
-
-    public Price(double _value, Currency _currency) {
-        this.value = _value;
-        this.currency = _currency;
-    }
-    
-    public double getValue() {
-        return value;
-    }
-
-    public void setValue(double _value) {
-        this.value = _value;
-    }
-
-    public Currency getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(Currency _currency) {
-        this.currency = _currency;
-    }
-    
-   
+public enum Currency {
+    PL, EUR
 }

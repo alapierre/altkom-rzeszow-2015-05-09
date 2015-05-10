@@ -20,13 +20,11 @@ package pl.altkom.jpr.bookstore;
  * @author Waldemar Dacko <dackow@gmail.com>
  */
 public class Payment {
-
-    private PaymentStatus status;
+    private PaymentStatus status = PaymentStatus.NEW;
     private PaymentType type;
     private Price price;
 
-    public Payment(PaymentStatus _status, PaymentType _type, Price _price) {
-        this.status = _status;
+    public Payment(PaymentType _type, Price _price) {
         this.type = _type;
         this.price = _price;
     }

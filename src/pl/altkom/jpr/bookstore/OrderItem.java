@@ -21,11 +21,51 @@ package pl.altkom.jpr.bookstore;
  */
 public class OrderItem {
     
-    public int orderItemId;
-    public int orderId;    
-    public int bookId;   
-    public double bookPrice;
-    public double bookQuantity;
+    private int orderItemId;
+    private int orderId;    
+    private int bookId;   
+    private double bookPrice;
+    private double bookQuantity;
+
+    public int getOrderItemId() {
+        return orderItemId;
+    }
+
+    public void setOrderItemId(int orderItemId) {
+        this.orderItemId = orderItemId;
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
+    }
+
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
+
+    public double getBookPrice() {
+        return bookPrice;
+    }
+
+    public void setBookPrice(double bookPrice) {
+        this.bookPrice = bookPrice;
+    }
+
+    public double getBookQuantity() {
+        return bookQuantity;
+    }
+
+    public void setBookQuantity(double bookQuantity) {
+        this.bookQuantity = bookQuantity;
+    }
     
     
 }

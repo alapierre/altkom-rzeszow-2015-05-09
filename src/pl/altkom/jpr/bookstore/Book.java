@@ -21,11 +21,11 @@ package pl.altkom.jpr.bookstore;
  */
 public class Book {
     
-    public int id;
-    public String name;
-    public String description;
-    public String isbn;
-    public int quantity;
+    private int id;
+    private String name;
+    private String description;
+    private String isbn;
+    private int quantity;
 
     public int getId() {
         return id;

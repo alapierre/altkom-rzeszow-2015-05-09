@@ -20,24 +20,14 @@ package pl.altkom.jpr.bookstore;
  * @author Waldemar Dacko <dackow@gmail.com>
  */
 public class Payment {
-    private long id;
     private STATUS status; 
     private TYPE type;
     private Price price;
 
-    public Payment(long _id, STATUS _status, TYPE _type, Price _price) {
-        this.id = _id;
+    public Payment(STATUS _status, TYPE _type, Price _price) {
         this.status = _status;
         this.type = _type;
         this.price = _price;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long _id) {
-        this.id = _id;
     }
 
     public STATUS getStatus() {

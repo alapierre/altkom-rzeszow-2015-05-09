@@ -28,6 +28,15 @@ public class Book {
     private String isbn;
     private int quantity;
 
+    public Book(int id, String title, String author, String description, String isbn, int quantity) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.isbn = isbn;
+        this.quantity = quantity;
+    }
+
     public int getId() {
         return id;
     }

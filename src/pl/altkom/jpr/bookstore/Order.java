@@ -28,5 +28,63 @@ public class Order {
     public String lastModificationDate;
     public int paymentId;
     public int shippingId;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
+
+    public String getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
+    }
+
+    public String getLastModificationDate() {
+        return lastModificationDate;
+    }
+
+    public void setLastModificationDate(String lastModificationDate) {
+        this.lastModificationDate = lastModificationDate;
+    }
+
+    public int getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
+    }
+
+    public int getShippingId() {
+        return shippingId;
+    }
+
+    public void setShippingId(int shippingId) {
+        this.shippingId = shippingId;
+    }
+    
+    
     
 }

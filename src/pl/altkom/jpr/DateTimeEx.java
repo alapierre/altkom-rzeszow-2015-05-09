@@ -15,10 +15,31 @@
  */
 package pl.altkom.jpr;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  *
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
 public class DateTimeEx {
+    
+    public static void main(String[] args) {
+        
+        Date date = new Date();
+        
+        Calendar calendar = Calendar.getInstance();
+        
+        calendar.setTime(date);
+        
+        calendar.add(Calendar.DAY_OF_MONTH, 30);
+        
+        DateFormat df = DateFormat.getDateTimeInstance();
+        
+        System.out.println(df.format(calendar.getTime()));
+        
+        
+    }
     
 }

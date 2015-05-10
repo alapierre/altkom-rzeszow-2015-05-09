@@ -15,36 +15,17 @@
  */
 package pl.altkom.jpr;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.Comparator;
 
 /**
  *
  * @author Adrian Lapierre <adrian@soft-project.pl>
  */
-public class SortExample {
-    
-    public static void main(String[] args) {
-        
-        List<Person> list = new java.util.ArrayList<>();
-        
-        list.add(new Person("Jan", "Kowalski"));
-        list.add(new Person("Piotr", "Nowak"));
-        list.add(new Person("Adam", "Zieliński"));
-        list.add(new Person("Krzysztof", "Adamski"));
-        
-        Collections.sort(list);
-        
-        for(Person person : list) {
-            System.out.println(person);
-        }
-        
-        Collections.sort(list, new PersonComparator());
-        
-        for(Person person : list) {
-            System.out.println(person);
-        }
-        
+public class PersonComparator implements Comparator<Person>{
+
+    @Override
+    public int compare(Person p1, Person p2) {
+        return p1.getName().compareTo(p2.getName());
     }
     
 }

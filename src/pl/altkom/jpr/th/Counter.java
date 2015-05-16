@@ -9,10 +9,13 @@ package pl.com.softproject.scjp.th;
  */
 public class Counter {
     
-    private int i;
+    private Integer i;
     
     public int increment() {
-        return i++;
+        
+        synchronized (i){
+            return i++;
+        }
     }
     
     public static void main(String[] args) {
